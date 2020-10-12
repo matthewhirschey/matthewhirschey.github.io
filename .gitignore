@@ -2,8 +2,8 @@
 .idea/
 # Hugo
 /resources/
-public/
 .Rproj.user
 .Rhistory
 $\.DS_Store
 $\.Rhistory
+\.Rproj^
