@@ -1,9 +1,0 @@
-# IDEs
-.idea/
-# Hugo
-/resources/
-.Rproj.user
-.Rhistory
-$\.DS_Store
-$\.Rhistory
-\.Rproj^
