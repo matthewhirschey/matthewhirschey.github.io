@@ -9,7 +9,7 @@ links:
     url: "https://twitter.com/matthewhirschey"
   - label: Science
     url: "http://www.hirscheylab.org"
-  - label: Computation
+  - label: Discovery
     url: "https://www.datadrivenhypothesis.org"
   - label: Heureka!
     url: "https://www.heurekalabs.org/"
