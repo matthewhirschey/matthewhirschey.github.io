@@ -5,14 +5,14 @@ color1: "#116095"
 color2: "#7EC9D6"
 angle: 130
 links:
-  - label: Email
-    url: "mailto:matthew@hirschey.org"
   - label: Twitter
     url: "https://twitter.com/matthewhirschey"
+  - label: Science
+    url: "http://www.hirscheylab.org"
+  - label: Computation
+    url: "https://www.datadrivenhypothesis.org"
   - label: Heureka!
     url: "https://www.heurekalabs.org/"
-  - label: YouTube
-    url: "https://www.youtube.com/c/HeurekaLabs"
 output:
   postcards::onofre
 ---
