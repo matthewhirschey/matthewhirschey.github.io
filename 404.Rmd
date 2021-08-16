@@ -1,22 +1,12 @@
 ---
 title: "404"
 image: "Hirschey_Matt_square_bw.jpg"
-color1: "#116095"
-color2: "#7EC9D6"
+color1: "#7EC9D6"
+color2: "#116095"
 angle: 130
 output:
   postcards::onofre
 ---
- 
-```{r, echo=FALSE}
-library(metathis)
-meta() %>%
-  meta_tag(
-    "http-equiv" = "refresh",
-    content = "5", 
-    URL = "https://www.heurekalabs.org/"
-  )
-```
  
 This page doesn't exist.  
 Articles, vidoes, and more moved to [Heureka Labs](http://www.heurekalabs.org).
