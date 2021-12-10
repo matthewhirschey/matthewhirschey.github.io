@@ -9,6 +9,8 @@ links:
     url: "https://twitter.com/matthewhirschey"
   - label: Science
     url: "http://www.hirscheylab.org"
+  - label: Art
+    url: "https://opensea.io/matthewhirschey"
   - label: Discovery
     url: "https://www.datadrivenhypothesis.org"
   - label: Heureka!
@@ -17,4 +19,4 @@ output:
   postcards::onofre
 ---
  
-Matthew is a scientist and associate professor at Duke University. His work focuses on different aspects of metabolic control, mitochondrial signaling, and cellular processes regulating human health and disease. He is also the Director of the Center for Computational Thinking, where he works to enable computational education across disciplines. He writes about creativity and experiments in thinking at Heureka Labs.
+Matthew is a scientist and associate professor at Duke University. His work focuses on different aspects of metabolic control, mitochondrial signaling, and cellular processes regulating human health and disease. He is also the Director of the Center for Computational Thinking, where he works to enable computational education across disciplines. He occassionally makes art, and writes about creativity and experiments in thinking.
