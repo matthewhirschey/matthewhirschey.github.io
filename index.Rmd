@@ -10,10 +10,10 @@ links:
   - label: Science
     url: "http://www.hirscheylab.org"
   - label: Art
-    url: "https://opensea.io/matthewhirschey"
+    url: "https://foundation.app/matthewhirschey"
   - label: Discovery
-    url: "https://www.datadrivenhypothesis.org"
-  - label: Heureka!
+    url: "https://www.datadrivenhypothesis.com"
+  - label: Thinking @Heureka!
     url: "https://www.heurekalabs.org/"
 output:
   postcards::onofre
