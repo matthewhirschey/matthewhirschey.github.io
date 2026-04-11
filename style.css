@@ -1,0 +1,225 @@
+/* Matthew Hirschey — pure HTML/CSS, no frameworks.
+   Layout adapted from karpathy.ai (12-col grid, timeline, cards). */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333;
+}
+
+a { color: #116095; }
+a:visited { color: #116095; }
+
+/* Layout */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 992px) {
+    .container { width: 970px; }
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/* Header */
+#dhead { margin-top: 20px; }
+#dpic { grid-column: span 6; text-align: right; }
+#ddesc { padding-top: 40px; padding-left: 20px; grid-column: span 6; }
+@media (max-width: 991px) {
+    #dpic { grid-column: span 12; text-align: center; }
+    #ddesc { grid-column: span 12; padding-top: 20px; text-align: center; }
+}
+h1 {
+    font-size: 34px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+h2 {
+    font-weight: normal;
+    font-style: italic;
+    color: #999;
+    font-size: 18px;
+    padding: 0;
+    margin: 5px 0 10px 0;
+}
+@media (min-width: 992px) {
+    h2 { max-width: 420px; }
+}
+#dpic img {
+    width: 240px;
+    height: 240px;
+    border-radius: 120px;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+#dico { margin-top: 10px; }
+#dico a {
+    display: inline-block;
+    margin-right: 8px;
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    padding-bottom: 1px;
+}
+#dico a:hover { color: #116095; border-bottom-color: #116095; }
+
+/* Horizontal rule */
+hr {
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    padding: 0;
+    margin: 20px 0 20px 0;
+    border: 0;
+}
+
+/* Timeline (history) */
+.ico {
+    grid-column: span 1;
+    vertical-align: top;
+    border-left: 2px solid #cfcfcf;
+    position: relative;
+    min-height: 40px;
+}
+.ico .badge {
+    display: block;
+    width: 56px;
+    height: 56px;
+    margin-left: 10px;
+    border-radius: 6px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    color: #116095;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.ico img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    object-fit: contain;
+    border-radius: 5px;
+    background: #fff;
+}
+.desc {
+    grid-column: span 10;
+    vertical-align: top;
+    font-size: 17px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.entry-dot {
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 7px;
+    background-color: #cfcfcf;
+    border: 2px solid white;
+}
+.timespan {
+    grid-column: span 1;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 5px;
+    color: #bbb;
+}
+
+/* Section titles */
+.ctitle {
+    font-size: 36px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-weight: normal;
+}
+
+/* Featured talks (cards) */
+#featured-talks .row {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding-bottom: 30px;
+}
+.card {
+    grid-column: span 3;
+    vertical-align: top;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+.card .cyear { color: #116095; font-weight: 600; font-size: 15px; }
+.card .cvenue { display: block; margin-top: 4px; }
+.card .cloc { display: block; color: #999; font-size: 13px; margin-top: 4px; }
+@media (max-width: 991px) {
+    .card { grid-column: span 6; }
+    #featured-talks .row { grid-column-gap: 5px; grid-row-gap: 5px; }
+}
+
+/* Pet projects */
+#pet-projects .row { grid-column-gap: 10px; grid-row-gap: 10px; }
+.project {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+.pico {
+    float: left;
+    margin-right: 12px;
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    color: #116095;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 60px;
+    text-align: center;
+}
+.pdesc { overflow: hidden; }
+.pend { clear: both; }
+
+/* Publications */
+.pub {
+    font-size: 14px;
+    border-left: 4px solid #aaa;
+    padding: 2px 0 2px 10px;
+    margin-bottom: 10px;
+}
+.pub-title { display: inline; color: #333; font-weight: 600; }
+.pub-venue { display: inline; color: #090; }
+.pub-authors { display: block; color: #333; }
+
+/* Teaching list */
+.tul { padding: 0; }
+.til {
+    display: block;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+.nodot { list-style-type: none; padding-left: 0; }
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+}
+footer a { color: #999; }
