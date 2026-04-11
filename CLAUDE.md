@@ -28,9 +28,9 @@ make clean   # delete index.html
 
 | File | Role |
 |---|---|
-| `index.qmd` | **Source of truth.** YAML front-matter (hero, links, talks, projects) + markdown body |
+| `index.qmd` | **Source of truth.** YAML front-matter (hero, links, talks, projects, writing) + markdown body |
 | `template.html` | Pandoc template — hero scaffold, `$body$` slot, footer |
-| `render-data.lua` | Pandoc Lua filter that expands `{{talks}}` and `{{projects}}` markers into HTML from YAML arrays |
+| `render-data.lua` | Pandoc Lua filter that expands `{{talks}}`, `{{projects}}`, and `{{writing}}` markers into HTML from YAML arrays |
 | `style.css` | Pure CSS, karpathy-derived 12-col grid, `.entry` timeline, `.card`, `.pub` |
 | `index.html` | **Build artifact.** Committed so GitHub Pages can serve it. Never edit by hand. |
 | `Makefile` | `make build` / `open` / `clean` |
@@ -42,10 +42,11 @@ make clean   # delete index.html
 
 - **Hero tagline, links, email:** YAML front-matter at top of `index.qmd`.
 - **Talks:** add one YAML entry under `talks:` — fields `year`, `venue`, `loc`.
-- **Projects / tools:** add one YAML entry under `projects:` — fields `badge`, `title`, `url`, `desc` (markdown OK in desc).
+- **Projects / tools:** add one YAML entry under `projects:` — fields `title`, `url`, `desc` (markdown OK), plus either `logo:` (path to an image in `img/`) or `badge:` (short text fallback).
+- **Writing cards:** add one YAML entry under `writing:` — fields `title`, `url`, `img` (thumbnail path), `desc`. Rendered as a 3-up card row from a `{{writing}}` marker in the body.
 - **Publications:** `::: {.pub}` fenced div with three `[…]{.pub-title}`, `[…]{.pub-authors}`, `[…]{.pub-venue}` lines. Append new ones at the top of the list.
 - **Timeline:** `:::::: {.entry .row}` blocks — note **6 colons** on the outer fence, **3** on the inner. Copy an existing block and edit year / logo path / description.
-- **Prose sections (bio, teaching, writing, misc):** plain markdown paragraphs and lists.
+- **Prose sections (bio, teaching, writing intro, misc):** plain markdown paragraphs and lists.
 
 After any edit: `make build`, eyeball `index.html` in a browser, commit both files, push.
 
@@ -54,7 +55,8 @@ After any edit: `make build`, eyeball `index.html` in a browser, commit both fil
 Ranked by ROI. Use judgment, ship the easy ones, leave the rest.
 
 - [ ] **Featured talks → thumbnails.** Highest ROI. Add an image per card (YouTube video still, conference press shot, slide screenshot). Will need to extend the `talks:` YAML schema with an `img` field and update `render-data.lua` to emit `<img>` inside `.card`. CSS `.card` already has space.
-- [ ] **Projects → real logos / screenshots.** As new projects land, give each a logo or UI screenshot instead of the text `badge`. Same pattern as talks: add `img` field, update Lua filter.
+- [x] **Projects → real logos / screenshots.** Schema now supports `logo:` (image) or `badge:` (text fallback). DDH uses its hex logo. As new projects land, pass a `logo:` path.
+- [x] **Writing → post thumbnails.** Writing section now renders three cards with thumbnails pulled from the Heureka Labs blog posts. Schema: `writing:` array with `title`, `url`, `img`, `desc`.
 - [ ] **Misc section → inline images.** Scatter 1–2 small images — a Foundation artwork, a quantum-dot-era photo, something personal. Karpathy does this to break up the text wall.
 - [ ] **Timeline entries → photo essays.** Optional. Each history entry could get 1–2 images (a lab shot, a building, a conference photo). Karpathy does this on his Tesla entry. Resist the academic-photo-album trap — only pick images with real meaning.
 - [ ] **Hero socials → SVG icons.** Replace text links with SVG glyphs. Minor polish.
