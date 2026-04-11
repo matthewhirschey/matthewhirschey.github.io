@@ -1,0 +1,72 @@
+# matthewhirschey.com — project guide
+
+Personal site for Matthew Hirschey, deployed via GitHub Pages (custom domain `matthewhirschey.com`, CNAME already in place). Karpathy.ai-inspired single-page layout.
+
+## Hard constraints
+
+- **Zero frameworks.** Pure HTML + CSS. No JS. No bootstrap. No analytics.
+- **Output stays tiny.** `index.html` should be ~17 KB, `style.css` ~5 KB. If either grows past 30 KB, something is wrong.
+- **No 500-pound websites.** If a change pulls in a dependency, find another way.
+
+## Source → build → output
+
+```
+index.qmd   ──┐
+template.html ─┤──[ quarto render ]──►  index.html  ──►  GitHub Pages
+render-data.lua ┘
+```
+
+Edit `index.qmd` (and for some things, `template.html` or `render-data.lua`). Run `make build`. Commit both the source and the regenerated `index.html`.
+
+```
+make build   # quarto render + prepend doctype
+make open    # build then open in browser
+make clean   # delete index.html
+```
+
+## Files
+
+| File | Role |
+|---|---|
+| `index.qmd` | **Source of truth.** YAML front-matter (hero, links, talks, projects) + markdown body |
+| `template.html` | Pandoc template — hero scaffold, `$body$` slot, footer |
+| `render-data.lua` | Pandoc Lua filter that expands `{{talks}}` and `{{projects}}` markers into HTML from YAML arrays |
+| `style.css` | Pure CSS, karpathy-derived 12-col grid, `.entry` timeline, `.card`, `.pub` |
+| `index.html` | **Build artifact.** Committed so GitHub Pages can serve it. Never edit by hand. |
+| `Makefile` | `make build` / `open` / `clean` |
+| `img/` | Timeline logos + any future section images |
+| `Hirschey_CV.pdf` | Copied from `~/everything/work/areas/resume-cv` on each CV update |
+| `CNAME`, `404.html`, `refresh` | GitHub Pages plumbing, don't touch |
+
+## Editing patterns
+
+- **Hero tagline, links, email:** YAML front-matter at top of `index.qmd`.
+- **Talks:** add one YAML entry under `talks:` — fields `year`, `venue`, `loc`.
+- **Projects / tools:** add one YAML entry under `projects:` — fields `badge`, `title`, `url`, `desc` (markdown OK in desc).
+- **Publications:** `::: {.pub}` fenced div with three `[…]{.pub-title}`, `[…]{.pub-authors}`, `[…]{.pub-venue}` lines. Append new ones at the top of the list.
+- **Timeline:** `:::::: {.entry .row}` blocks — note **6 colons** on the outer fence, **3** on the inner. Copy an existing block and edit year / logo path / description.
+- **Prose sections (bio, teaching, writing, misc):** plain markdown paragraphs and lists.
+
+After any edit: `make build`, eyeball `index.html` in a browser, commit both files, push.
+
+## TODO — image opportunities
+
+Ranked by ROI. Use judgment, ship the easy ones, leave the rest.
+
+- [ ] **Featured talks → thumbnails.** Highest ROI. Add an image per card (YouTube video still, conference press shot, slide screenshot). Will need to extend the `talks:` YAML schema with an `img` field and update `render-data.lua` to emit `<img>` inside `.card`. CSS `.card` already has space.
+- [ ] **Projects → real logos / screenshots.** As new projects land, give each a logo or UI screenshot instead of the text `badge`. Same pattern as talks: add `img` field, update Lua filter.
+- [ ] **Misc section → inline images.** Scatter 1–2 small images — a Foundation artwork, a quantum-dot-era photo, something personal. Karpathy does this to break up the text wall.
+- [ ] **Timeline entries → photo essays.** Optional. Each history entry could get 1–2 images (a lab shot, a building, a conference photo). Karpathy does this on his Tesla entry. Resist the academic-photo-album trap — only pick images with real meaning.
+- [ ] **Hero socials → SVG icons.** Replace text links with SVG glyphs. Minor polish.
+
+## TODO — content
+
+- [ ] Add more projects/tools as they land (the `projects:` YAML array is designed to grow).
+- [ ] Keep News/timeline in sync with major career moves and grants.
+- [ ] When the CV updates, copy the rendered PDF from `~/everything/work/areas/resume-cv/Hirschey_CV.pdf` to the site root.
+- [ ] Optimize `Hirschey_Matt_square_bw.jpg` (currently 1.3 MB) — only heavy asset on the page. Target ~100 KB.
+- [ ] Replace the legacy 4 MB `404.html` with a minimal matching version at some point.
+
+## Deployment
+
+Push to `master` → GitHub Pages serves. No CI. No build step on the server. Local build → commit `index.html` → push is the whole pipeline.

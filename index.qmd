@@ -1,0 +1,297 @@
+---
+title: "Matthew Hirschey"
+tagline: "I build computational tools that make scientific discovery easier to understand how cells sense and use nutrients."
+description: "Matthew Hirschey — scientist, Associate Professor at Duke University, Director of the Center for Computational Thinking."
+avatar: "Hirschey_Matt_square_bw.jpg"
+email: "matthew.hirschey@duke.edu"
+location: "Durham, NC"
+links:
+  - label: "Twitter"
+    url: "https://twitter.com/matthewhirschey"
+  - label: "Lab"
+    url: "https://www.hirscheylab.org"
+  - label: "Heureka"
+    url: "https://www.heurekalabs.co"
+  - label: "Data"
+    url: "https://www.datadrivenhypothesis.com"
+  - label: "Email"
+    url: "mailto:matthew.hirschey@duke.edu"
+  - label: "CV"
+    url: "Hirschey_CV.pdf"
+
+# Featured talks — rendered into the body by render-data.lua where {{talks}} appears.
+talks:
+  - year: "2026"
+    venue: "BCG × QS: Workforce, AI, and the Future of Skills"
+    loc: "Washington, D.C."
+  - year: "2025"
+    venue: "OpenAI Discussion with Sarah Friar (moderator)"
+    loc: "Duke University"
+  - year: "2025"
+    venue: "UseR! 2025 — Co-Organizer & Speaker"
+    loc: "Duke University"
+  - year: "2025"
+    venue: "International Symposium for Organelle Medicine"
+    loc: "Yonsei University, Korea"
+  - year: "2024"
+    venue: "Duke AI Summit"
+    loc: "Duke University"
+  - year: "2023"
+    venue: "10th Helmholtz Diabetes Conference"
+    loc: "Munich, Germany"
+  - year: "2022"
+    venue: "American Diabetes Association 82nd Annual Meeting"
+    loc: "New Orleans, LA"
+  - year: "2019"
+    venue: "Keystone: Mitochondria in Aging & Age-Related Disease"
+    loc: "Keystone, CO"
+
+# Tools & side projects — rendered into the body by render-data.lua where {{projects}} appears.
+# desc may contain inline markdown or raw HTML. Add new entries as you build them.
+projects:
+  - badge: "DDH"
+    title: "Data-Driven Hypothesis"
+    url: "https://www.datadrivenhypothesis.com"
+    desc: "A web tool that integrates DepMap, expression, and literature data to suggest functions for understudied genes. Pairs with the pathway co-essentiality work in the lab. Preprint on bioRxiv, 2026."
+
+format:
+  html:
+    template: template.html
+    theme: none
+    minimal: true
+    embed-resources: false
+    anchor-sections: false
+    section-divs: false
+    link-external-icon: false
+    code-tools: false
+    toc: false
+    filters:
+      - render-data.lua
+---
+
+::::::: {#history .container}
+
+:::::: {.entry .row}
+::: {.timespan}
+2023 -
+:::
+::: {.ico}
+<div class="entry-dot"></div>
+![](img/heureka-logo.png)
+:::
+::: {.desc}
+Founded [Heureka Labs](https://www.heurekalabs.co), building AI foundation models trained on multi-omic experimental data to help researchers find patterns in biological systems. Our desktop app, Heureka Bench, brings model querying, lab management, literature curation, and cloud compute into one place for organizing and analyzing scientific work.
+:::
+::::::
+
+:::::: {.entry .row}
+::: {.timespan}
+2021 -
+:::
+::: {.ico}
+<div class="entry-dot"></div>
+![](img/cct-logo.png)
+:::
+::: {.desc}
+I am the inaugural Director of the Duke [Center for Computational Thinking](https://computationalthinking.duke.edu). The CCT is a University-wide initiative to make computational thinking part of every discipline. Programs, partnerships, and AI literacy work for students, faculty, and leadership across Duke.
+:::
+::::::
+
+:::::: {.entry .row}
+::: {.timespan}
+2011 -
+:::
+::: {.ico}
+<div class="entry-dot"></div>
+![](img/duke-logo.png)
+:::
+::: {.desc}
+I joined the faculty of [Duke University](https://medicine.duke.edu) and started the [Hirschey Lab](https://www.hirscheylab.org), housed in the [Duke Molecular Physiology Institute](https://dmpi.duke.edu). The lab studies how cells integrate nutrient sensing and metabolism. I was promoted to tenured Associate Professor in 2019. I also hold a joint appointment at Duke-NUS in Singapore.
+:::
+::::::
+
+:::::: {.entry .row}
+::: {.timespan}
+2006 - 2011
+:::
+::: {.ico}
+<div class="entry-dot"></div>
+![](img/gladstone-logo.jpeg)
+:::
+::: {.desc}
+I did post-doctoral research with [Eric Verdin](https://gladstone.org/people/eric-verdin) at the Gladstone Institutes at UCSF. I worked on mammalian sirtuins and the biology of aging.
+:::
+::::::
+
+:::::: {.entry .row}
+::: {.timespan}
+2001 - 2006
+:::
+::: {.ico}
+<div class="entry-dot"></div>
+![](img/ucsb-logo.png)
+:::
+::: {.desc}
+My Ph.D. was in Chemistry & Biochemistry at UC Santa Barbara with [Alison Butler](https://labs.chem.ucsb.edu/butler/alison/). I combined inorganic semiconductor synthesis with microbiology, where I functionalized nanocrystals called quantum dots for new kinds of biological imaginging. 
+:::
+::::::
+
+:::::: {.entry .row}
+::: {.timespan}
+1997 - 2001
+:::
+::: {.ico}
+<div class="entry-dot"></div>
+![](img/uvm-logo.png)
+:::
+::: {.desc}
+B.S. in Biological Sciences at the University of Vermont, with research in mesoporous silica with [Chris Landry](https://www.uvm.edu/cas/chemistry/profile/christopher-c-landry) and glutathione metabolism with [Naomi Fukagawa](https://en.wikipedia.org/wiki/Naomi_Fukagawa).
+:::
+::::::
+
+:::::::
+
+------------------------------------------------------------------------
+
+::: {#bio .container}
+<div class="ctitle">bio</div>
+
+Matthew Hirschey is a tenured Associate Professor at Duke University in the Departments of Medicine (Endocrinology, Metabolism & Nutrition) and Pharmacology & Cancer Biology, and a faculty member of the Duke Molecular Physiology Institute. Since 2021 he has been the inaugural Director of the Duke Center for Computational Thinking. His lab studies how cells integrate nutrient sensing and metabolism, using data-driven approaches to surface new regulatory pathways relevant to diabetes, cardiovascular disease, cancer, and aging. His work has appeared in *Nature*, *Science*, *Cell Metabolism*, and *Molecular Cell*, and is supported by the NIH, DOD, and OpenAI. He lives with his wife and children in Durham, NC.
+:::
+
+{{talks}}
+
+::: {#teaching .container}
+<div class="ctitle">teaching</div>
+
+At Duke I teach across the medical school, graduate programs, and undergraduate curriculum, with a consistent throughline: using biological data to tell a story. As Director of the [Center for Computational Thinking](https://computationalthinking.duke.edu), I also build programs that put computational thinking into the hands of students across every discipline.
+
+::: {.tul .nodot}
+- [**CMB710 · TidyBiology**]{} — An Introduction to Biological Data Science in R. A flagship course, taught yearly since 2019.
+- [**HSF · Human Structure & Function**]{} — Medical student curriculum, metabolism/endocrinology modules.
+- [**MCB818 · Molecular Mechanisms of Oncogenesis**]{} — Graduate cancer biology, 2022 – 2025.
+- [**MCB820 · Cancer Research from Concept to Translation**]{} — 2026.
+- [**PCB710 · Grant Writing**]{} — 2017 – 2022.
+- [**UNIV103 · Let's talk about: Digital You**]{} — An undergraduate seminar on identity and attention online.
+:::
+:::
+
+::: {#writing .container}
+<div class="ctitle">writing</div>
+
+Most of my writing shows up in academic journals, but I also have an occasional blog — [**Heureka Labs**](https://www.heurekalabs.org) — with essays on creativity, computational thinking, and experiments in how we think.
+
+A few selected pieces:
+
+- [**How do you come up with a new idea?**](https://www.heurekalabs.org/a-new-experiment/) — on the mechanics of ideation and why the interesting question isn't "what should I work on" but "how did you decide what to try."
+- [**Sell the sawdust**](https://www.heurekalabs.org/sell-the-sawdust/) — on the byproducts of research and the overlooked value hiding in the scraps of what you're already doing.
+- [**Why you need to learn to program**](https://www.heurekalabs.org/why-learn-to-program/) — the case for programming as a thinking tool, not a job skill — for scientists, students, and pretty much everyone else.
+:::
+
+{{projects}}
+
+:::::: {#publications .container}
+<div class="ctitle">selected publications</div>
+
+A curated list. For the full record (nearly 100 papers, books, and chapters) see the [CV](Hirschey_CV.pdf).
+
+::: {.pub}
+[Pathway Coessentiality Mapping Reveals Complex II is Required for de novo Purine Biosynthesis in Acute Myeloid Leukemia.]{.pub-title}
+[Stewart AE\*, Zachman DK\*, Castellano-Escuder P, et al.]{.pub-authors}
+[Nature Metabolism (2025, in press)]{.pub-venue}
+:::
+
+::: {.pub}
+[Interpretable multi-omics integration with UMAP embeddings and density-based clustering.]{.pub-title}
+[Castellano-Escuder P, Zachman DK, Han K, Hirschey MD.]{.pub-authors}
+[Nature Communications (2025) 16:5771]{.pub-venue}
+:::
+
+::: {.pub}
+[Cysteine S-acetylation is a post-translational modification involved in metabolic regulation.]{.pub-title}
+[Keenan EK, Bareja A, Lam Y, Grimsrud PA, Hirschey MD.]{.pub-authors}
+[Nature Metabolic Health & Disease (2025) 3:43]{.pub-venue}
+:::
+
+::: {.pub}
+[Statin therapy inhibits fatty acid synthase via dynamic protein modifications.]{.pub-title}
+[Trub AG, Wagner GR, Anderson KA, et al.]{.pub-authors}
+[Nature Communications (2022) 13:2542]{.pub-venue}
+:::
+
+::: {.pub}
+[The Growing Landscape of Protein Modifications.]{.pub-title}
+[Keenan EK, Zachman DK, Hirschey MD.]{.pub-authors}
+[Molecular Cell (2021) 81(9):1868-1878]{.pub-venue}
+:::
+
+::: {.pub}
+[Creating An Environment For A Distributed Scientific Workforce.]{.pub-title}
+[Hirschey MD.]{.pub-authors}
+[Nature (2020) 582:184]{.pub-venue}
+:::
+
+::: {.pub}
+[SIRT4 is a Lysine Deacylase That Controls Leucine Metabolism and Insulin Secretion.]{.pub-title}
+[Anderson KA, Huynh FK, Fisher-Wellman K, et al.]{.pub-authors}
+[Cell Metabolism (2017) 25(4):838-855]{.pub-venue}
+:::
+
+::: {.pub}
+[A Class of Reactive Acyl-CoA Species Reveals the Nonenzymatic Origins of Protein Acylation.]{.pub-title}
+[Wagner GR, Bhatt DP, O'Connell TM, et al.]{.pub-authors}
+[Cell Metabolism (2017) 25(4):823-837]{.pub-venue}
+:::
+
+::: {.pub}
+[Role of NAD⁺ and mitochondrial sirtuins in cardiac and renal diseases.]{.pub-title}
+[Hershberger KA, Martin AS, Hirschey MD.]{.pub-authors}
+[Nature Reviews Nephrology (2017) 13(4):213-225]{.pub-venue}
+:::
+
+::: {.pub}
+[Non-enzymatic protein acylation as a carbon stress regulated by sirtuin deacylases.]{.pub-title}
+[Wagner GR, Hirschey MD.]{.pub-authors}
+[Molecular Cell (2014) 54(1):5-16]{.pub-venue}
+:::
+
+::: {.pub}
+[Lysine Glutarylation Is a Protein Post-Translational Modification Regulated by SIRT5.]{.pub-title}
+[Tan M\*, Peng C\*, Anderson KA\*, et al.]{.pub-authors}
+[Cell Metabolism (2014) 19(4):605-617]{.pub-venue}
+:::
+
+::: {.pub}
+[Suppression of Oxidative Stress by β-Hydroxybutyrate, an Endogenous Histone Deacetylase Inhibitor.]{.pub-title}
+[Shimazu T, Hirschey MD, Newman J, et al.]{.pub-authors}
+[Science (2013) 339:211-214]{.pub-venue}
+:::
+
+::: {.pub}
+[SIRT3 Deficiency and Mitochondrial Protein Hyperacetylation Accelerate the Development of the Metabolic Syndrome.]{.pub-title}
+[Hirschey MD, Shimazu T, Jing E, et al.]{.pub-authors}
+[Molecular Cell (2011) 44:177-190]{.pub-venue}
+:::
+
+::: {.pub}
+[SIRT3 Deacetylates Mitochondrial HMG-CoA Synthase 2 and Regulates Ketone Body Production.]{.pub-title}
+[Shimazu T\*, Hirschey MD\*, Ha L, et al.]{.pub-authors}
+[Cell Metabolism (2010) 12:654-661]{.pub-venue}
+:::
+
+::: {.pub}
+[SIRT3 regulates mitochondrial fatty acid oxidation via reversible enzyme deacetylation.]{.pub-title}
+[Hirschey MD, Shimazu T, Goetzman E, et al.]{.pub-authors}
+[Nature (2010) 464:121-125]{.pub-venue}
+:::
+
+::::::
+
+::: {#misc .container}
+<div class="ctitle">misc</div>
+
+- I make [art](https://foundation.app/matthewhirschey) when I want to create.
+- Currently learning: how to teach computational thinking to people who have never written a line of code and don't plan to.
+- If you're a prospective trainee: start with the [lab site](https://www.hirscheylab.org).
+- Eagle Scout.
+:::

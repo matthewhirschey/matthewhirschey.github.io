@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>$title$</title>
+$if(description)$    <meta name="description" content="$description$">
+$endif$    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <div id="dhead" class="container">
+      <div class="row">
+        <div id="dpic">
+          <img src="$avatar$" class="ppic" alt="$title$" />
+        </div>
+        <div id="ddesc">
+          <h1>$title$</h1>
+          <h2>$tagline$</h2>
+          <div id="dico">
+$for(links)$            <a href="$links.url$">$links.label$</a>
+$endfor$          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+$body$
+
+    <footer>
+      <div class="container">
+        © $title$ · <a href="mailto:$email$">$email$</a> · $location$
+      </div>
+    </footer>
+
+  </body>
+</html>
