@@ -47,12 +47,28 @@ talks:
     loc: "Keystone, CO"
 
 # Tools & side projects — rendered into the body by render-data.lua where {{projects}} appears.
-# desc may contain inline markdown or raw HTML. Add new entries as you build them.
+# Use `logo:` for an image badge, or `badge:` for text. desc may contain inline markdown.
 projects:
-  - badge: "DDH"
+  - logo: "img/ddh-logo.png"
     title: "Data-Driven Hypothesis"
     url: "https://www.datadrivenhypothesis.com"
     desc: "A web tool that integrates DepMap, expression, and literature data to suggest functions for understudied genes. Pairs with the pathway co-essentiality work in the lab. Preprint on bioRxiv, 2026."
+
+# Writing cards — rendered into the body where {{writing}} appears.
+# Each entry has a thumbnail, title, url, and short description.
+writing:
+  - title: "How do you come up with a new idea?"
+    url: "https://www.heurekalabs.org/a-new-experiment/"
+    img: "img/post-new-idea.jpg"
+    desc: "On the mechanics of ideation and why the interesting question isn't \"what should I work on\" but \"how did you decide what to try.\""
+  - title: "Sell the sawdust"
+    url: "https://www.heurekalabs.org/sell-the-sawdust/"
+    img: "img/post-sawdust.jpg"
+    desc: "On the byproducts of research and the overlooked value hiding in the scraps of what you're already doing."
+  - title: "Why you need to learn to program"
+    url: "https://www.heurekalabs.org/why-learn-to-program/"
+    img: "img/post-program.jpg"
+    desc: "The case for programming as a thinking tool, not a job skill — for scientists, students, and pretty much everyone else."
 
 format:
   html:
@@ -132,7 +148,7 @@ I did post-doctoral research with [Eric Verdin](https://gladstone.org/people/eri
 ![](img/ucsb-logo.png)
 :::
 ::: {.desc}
-My Ph.D. was in Chemistry & Biochemistry at UC Santa Barbara with [Alison Butler](https://labs.chem.ucsb.edu/butler/alison/). I combined inorganic semiconductor synthesis with microbiology, where I functionalized nanocrystals called quantum dots for new kinds of biological imaginging. 
+My Ph.D. was in Chemistry & Biochemistry at UC Santa Barbara with [Alison Butler](https://labs.chem.ucsb.edu/butler/alison/). I combined inorganic semiconductor synthesis with microbiology, where I functionalized nanocrystals called quantum dots for new kinds of biological imaging.
 :::
 ::::::
 
@@ -183,9 +199,7 @@ Most of my writing shows up in academic journals, but I also have an occasional 
 
 A few selected pieces:
 
-- [**How do you come up with a new idea?**](https://www.heurekalabs.org/a-new-experiment/) — on the mechanics of ideation and why the interesting question isn't "what should I work on" but "how did you decide what to try."
-- [**Sell the sawdust**](https://www.heurekalabs.org/sell-the-sawdust/) — on the byproducts of research and the overlooked value hiding in the scraps of what you're already doing.
-- [**Why you need to learn to program**](https://www.heurekalabs.org/why-learn-to-program/) — the case for programming as a thinking tool, not a job skill — for scientists, students, and pretty much everyone else.
+{{writing}}
 :::
 
 {{projects}}

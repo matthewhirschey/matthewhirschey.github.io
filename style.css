@@ -179,20 +179,77 @@ hr {
 }
 .pico {
     float: left;
-    margin-right: 12px;
-    width: 60px;
-    height: 60px;
+    margin-right: 14px;
+    width: 72px;
+    height: 72px;
     border-radius: 6px;
-    background: #f0f0f0;
+    background: #fff;
     border: 1px solid #ddd;
     color: #116095;
     font-weight: 600;
     font-size: 16px;
-    line-height: 60px;
+    line-height: 72px;
     text-align: center;
+    overflow: hidden;
 }
-.pdesc { overflow: hidden; }
+.pico img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.pdesc { overflow: hidden; padding-top: 4px; }
 .pend { clear: both; }
+
+/* Writing cards (blog post thumbnails) */
+.writing-row {
+    grid-column-gap: 14px;
+    grid-row-gap: 14px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.wcard {
+    grid-column: span 4;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.wcard .wthumb {
+    display: block;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+}
+.wcard .wthumb img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+.wcard .wtitle {
+    display: block;
+    padding: 10px 12px 4px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #116095;
+    text-decoration: none;
+    line-height: 1.3;
+}
+.wcard .wtitle:hover { text-decoration: underline; }
+.wcard .wdesc {
+    padding: 0 12px 12px;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.4;
+}
+@media (max-width: 991px) {
+    .wcard { grid-column: span 6; }
+}
+@media (max-width: 640px) {
+    .wcard { grid-column: span 12; }
+}
 
 /* Publications */
 .pub {
