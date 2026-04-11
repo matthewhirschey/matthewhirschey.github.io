@@ -5,6 +5,24 @@ description: "Matthew Hirschey — scientist, Associate Professor at Duke Univer
 avatar: "Hirschey_Matt_square_bw.jpg"
 email: "matthew.hirschey@duke.edu"
 location: "Durham, NC"
+
+# LLM / social metadata
+canonical_url: "https://matthewhirschey.com/"
+og_image: "https://matthewhirschey.com/Hirschey_Matt_square_bw.jpg"
+twitter_handle: "matthewhirschey"
+
+# sameAs graph for JSON-LD Person schema — identity links across the web.
+same_as:
+  - "https://twitter.com/matthewhirschey"
+  - "https://www.hirscheylab.org"
+  - "https://www.heurekalabs.co"
+  - "https://www.datadrivenhypothesis.com"
+  - "https://foundation.app/matthewhirschey"
+  - "https://orcid.org/0000-0003-4541-5376"
+  - "https://scholar.google.com/citations?user=OLG9E-sAAAAJ"
+  - "https://github.com/matthewhirschey"
+  - "https://scholars.duke.edu/person/matthew.hirschey"
+
 links:
   - label: "Twitter"
     url: "https://twitter.com/matthewhirschey"
@@ -83,6 +101,11 @@ format:
     toc: false
     filters:
       - render-data.lua
+  gfm:
+    output-file: index.md
+    wrap: none
+    filters:
+      - render-data.lua
 ---
 
 ::::::: {#history .container}
@@ -135,7 +158,7 @@ I joined the faculty of [Duke University](https://medicine.duke.edu) and started
 ![](img/gladstone-logo.jpeg)
 :::
 ::: {.desc}
-I did post-doctoral research with [Eric Verdin](https://gladstone.org/people/eric-verdin) at the Gladstone Institutes at UCSF. I worked on mammalian sirtuins and the biology of aging.
+I did post-doctoral research with [Eric Verdin](https://en.wikipedia.org/wiki/Eric_Verdin) at the Gladstone Institutes at UCSF. I worked on mammalian sirtuins and the biology of aging.
 :::
 ::::::
 
