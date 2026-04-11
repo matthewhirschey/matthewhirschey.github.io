@@ -5,7 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>$title$</title>
 $if(description)$    <meta name="description" content="$description$">
-$endif$    <link rel="stylesheet" type="text/css" href="style.css">
+$endif$$if(canonical_url)$    <link rel="canonical" href="$canonical_url$">
+$endif$    <meta name="author" content="$title$">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="$title$">
+$if(description)$    <meta property="og:description" content="$description$">
+$endif$$if(og_image)$    <meta property="og:image" content="$og_image$">
+$endif$$if(canonical_url)$    <meta property="og:url" content="$canonical_url$">
+$endif$    <meta property="profile:first_name" content="Matthew">
+    <meta property="profile:last_name" content="Hirschey">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+$if(twitter_handle)$    <meta name="twitter:creator" content="@$twitter_handle$">
+    <meta name="twitter:site" content="@$twitter_handle$">
+$endif$    <meta name="twitter:title" content="$title$">
+$if(description)$    <meta name="twitter:description" content="$description$">
+$endif$$if(og_image)$    <meta name="twitter:image" content="$og_image$">
+$endif$
+    <!-- Schema.org Person (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Matthew D. Hirschey",
+      "givenName": "Matthew",
+      "familyName": "Hirschey",
+      "url": "$canonical_url$",
+      "image": "$og_image$",
+      "email": "$email$",
+      "description": "$description$",
+      "jobTitle": "Associate Professor",
+      "worksFor": {
+        "@type": "EducationalOrganization",
+        "name": "Duke University",
+        "url": "https://duke.edu",
+        "department": {
+          "@type": "Organization",
+          "name": "Duke Center for Computational Thinking",
+          "url": "https://computationalthinking.duke.edu"
+        }
+      },
+      "alumniOf": [
+        { "@type": "EducationalOrganization", "name": "UC Santa Barbara", "url": "https://www.ucsb.edu" },
+        { "@type": "EducationalOrganization", "name": "University of Vermont", "url": "https://www.uvm.edu" }
+      ],
+      "knowsAbout": [
+        "metabolism", "mitochondria", "sirtuins", "nutrient sensing",
+        "computational biology", "data-driven discovery", "computational thinking"
+      ],
+      "sameAs": [
+$for(same_as)$        "$same_as$"$sep$,
+$endfor$
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
 

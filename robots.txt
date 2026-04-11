@@ -1,0 +1,29 @@
+# robots.txt for matthewhirschey.com
+# Permissive: human and AI crawlers are welcome.
+
+User-agent: *
+Allow: /
+
+# Explicit welcome for major LLM / AI search crawlers.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://matthewhirschey.com/sitemap.xml
