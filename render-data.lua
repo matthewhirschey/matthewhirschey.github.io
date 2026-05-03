@@ -7,6 +7,7 @@
 local talks = {}
 local projects = {}
 local writing = {}
+local publications = {}
 
 local function to_str(v)
   if v == nil then return "" end
@@ -52,6 +53,17 @@ function Meta(m)
         url   = to_str(w.url),
         img   = to_str(w.img),
         desc  = md_to_html(w.desc),
+      }
+    end
+  end
+  if m.publications then
+    for i, p in ipairs(m.publications) do
+      publications[i] = {
+        title   = to_str(p.title),
+        authors = to_str(p.authors),
+        venue   = to_str(p.venue),
+        year    = to_str(p.year),
+        doi     = to_str(p.doi),
       }
     end
   end
@@ -115,6 +127,70 @@ local function render_writing()
   return table.concat(parts, '\n')
 end
 
+-- JSON string escape — backslash, quote, control chars. Pandoc HTML-escapes `&`
+-- to `&amp;` after we emit, which corrupts JSON-LD parsing, so we strip `&`
+-- preventatively (per CLAUDE.md). Same for `<` and `>` to avoid HTML parser drift.
+local function json_escape(s)
+  if s == nil then return "" end
+  s = s:gsub("\\", "\\\\"):gsub('"', '\\"')
+  s = s:gsub("&", " and "):gsub("<", ""):gsub(">", "")
+  s = s:gsub("[%z\1-\31]", "")
+  return s
+end
+
+-- Split "Foo A, Bar B*, Baz C" into JSON-LD authors. Strips `*` co-first markers
+-- and "et al." entries. Drops trailing punctuation.
+local function authors_to_jsonld(s)
+  local clean = s:gsub("%.$", "")
+  local out = {}
+  for name in (clean .. ","):gmatch("([^,]+),%s*") do
+    name = name:gsub("^%s+", ""):gsub("%s+$", ""):gsub("%*", "")
+    if name ~= "" and not name:lower():match("^et al") then
+      table.insert(out, '{"@type":"Person","name":"' .. json_escape(name) .. '"}')
+    end
+  end
+  return table.concat(out, ",")
+end
+
+-- Pull the venue name from an author-styled string like
+-- "Nature Communications (2025) 16:5771" → "Nature Communications".
+local function periodical_name(venue)
+  return (venue:gsub("%s*%(.*$", ""))
+end
+
+local function render_publications()
+  local parts = {
+    '<div class="pub-list">',
+  }
+  for _, p in ipairs(publications) do
+    table.insert(parts, '<div class="pub">')
+    table.insert(parts, '<span class="pub-title">' .. p.title .. '</span>')
+    table.insert(parts, '<span class="pub-authors">' .. p.authors .. '</span>')
+    table.insert(parts, '<span class="pub-venue">' .. p.venue .. '</span>')
+    table.insert(parts, '</div>')
+    if p.doi ~= "" then
+      local jsonld = {
+        '<script type="application/ld+json">',
+        '{',
+        '"@context":"https://schema.org",',
+        '"@type":"ScholarlyArticle",',
+        '"name":"' .. json_escape(p.title) .. '",',
+        '"author":[' .. authors_to_jsonld(p.authors) .. '],',
+        '"datePublished":"' .. p.year .. '",',
+        '"isPartOf":{"@type":"Periodical","name":"' .. json_escape(periodical_name(p.venue)) .. '"},',
+        '"identifier":"' .. p.doi .. '",',
+        '"sameAs":"' .. p.doi .. '",',
+        '"url":"' .. p.doi .. '"',
+        '}',
+        '</script>',
+      }
+      table.insert(parts, table.concat(jsonld, ''))
+    end
+  end
+  table.insert(parts, '</div>')
+  return table.concat(parts, '\n')
+end
+
 function Para(el)
   if #el.content == 1 and el.content[1].t == "Str" then
     local text = el.content[1].text
@@ -124,6 +200,8 @@ function Para(el)
       return pandoc.RawBlock("html", render_projects())
     elseif text == "{{writing}}" then
       return pandoc.RawBlock("html", render_writing())
+    elseif text == "{{publications}}" then
+      return pandoc.RawBlock("html", render_publications())
     end
   end
 end

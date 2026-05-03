@@ -304,94 +304,96 @@ selected publications
 
 A curated list. For the full record (nearly 100 papers, books, and chapters) see the [CV](Hirschey_CV.pdf).
 
+<div class="pub-list">
 <div class="pub">
-
-<span class="pub-title">Pathway Coessentiality Mapping Reveals Complex II is Required for de novo Purine Biosynthesis in Acute Myeloid Leukemia.</span> <span class="pub-authors">Stewart AE\*, Zachman DK\*, Castellano-Escuder P, et al.</span> <span class="pub-venue">Nature Metabolism (2025, in press)</span>
-
+<span class="pub-title">Pathway Coessentiality Mapping Reveals Complex II is Required for de novo Purine Biosynthesis in Acute Myeloid Leukemia.</span>
+<span class="pub-authors">Stewart AE*, Zachman DK*, Castellano-Escuder P, et al.</span>
+<span class="pub-venue">Nature Metabolism (2025) 7(12):2474-2488</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Pathway Coessentiality Mapping Reveals Complex II is Required for de novo Purine Biosynthesis in Acute Myeloid Leukemia.","author":[{"@type":"Person","name":"Stewart AE"},{"@type":"Person","name":"Zachman DK"},{"@type":"Person","name":"Castellano-Escuder P"}],"datePublished":"2025","isPartOf":{"@type":"Periodical","name":"Nature Metabolism"},"identifier":"https://doi.org/10.1038/s42255-025-01410-x","sameAs":"https://doi.org/10.1038/s42255-025-01410-x","url":"https://doi.org/10.1038/s42255-025-01410-x"}</script>
 <div class="pub">
-
-<span class="pub-title">Interpretable multi-omics integration with UMAP embeddings and density-based clustering.</span> <span class="pub-authors">Castellano-Escuder P, Zachman DK, Han K, Hirschey MD.</span> <span class="pub-venue">Nature Communications (2025) 16:5771</span>
-
+<span class="pub-title">Interpretable multi-omics integration with UMAP embeddings and density-based clustering.</span>
+<span class="pub-authors">Castellano-Escuder P, Zachman DK, Han K, Hirschey MD.</span>
+<span class="pub-venue">Nature Communications (2025) 16:5771</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Interpretable multi-omics integration with UMAP embeddings and density-based clustering.","author":[{"@type":"Person","name":"Castellano-Escuder P"},{"@type":"Person","name":"Zachman DK"},{"@type":"Person","name":"Han K"},{"@type":"Person","name":"Hirschey MD"}],"datePublished":"2025","isPartOf":{"@type":"Periodical","name":"Nature Communications"},"identifier":"https://doi.org/10.1038/s41467-025-60822-1","sameAs":"https://doi.org/10.1038/s41467-025-60822-1","url":"https://doi.org/10.1038/s41467-025-60822-1"}</script>
 <div class="pub">
-
-<span class="pub-title">Cysteine S-acetylation is a post-translational modification involved in metabolic regulation.</span> <span class="pub-authors">Keenan EK, Bareja A, Lam Y, Grimsrud PA, Hirschey MD.</span> <span class="pub-venue">Nature Metabolic Health & Disease (2025) 3:43</span>
-
+<span class="pub-title">Cysteine S-acetylation is a post-translational modification involved in metabolic regulation.</span>
+<span class="pub-authors">Keenan EK, Bareja A, Lam Y, Grimsrud PA, Hirschey MD.</span>
+<span class="pub-venue">Nature Metabolic Health and Disease (2025) 3:43</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Cysteine S-acetylation is a post-translational modification involved in metabolic regulation.","author":[{"@type":"Person","name":"Keenan EK"},{"@type":"Person","name":"Bareja A"},{"@type":"Person","name":"Lam Y"},{"@type":"Person","name":"Grimsrud PA"},{"@type":"Person","name":"Hirschey MD"}],"datePublished":"2025","isPartOf":{"@type":"Periodical","name":"Nature Metabolic Health and Disease"},"identifier":"https://doi.org/10.1038/s44324-025-00081-2","sameAs":"https://doi.org/10.1038/s44324-025-00081-2","url":"https://doi.org/10.1038/s44324-025-00081-2"}</script>
 <div class="pub">
-
-<span class="pub-title">Statin therapy inhibits fatty acid synthase via dynamic protein modifications.</span> <span class="pub-authors">Trub AG, Wagner GR, Anderson KA, et al.</span> <span class="pub-venue">Nature Communications (2022) 13:2542</span>
-
+<span class="pub-title">Statin therapy inhibits fatty acid synthase via dynamic protein modifications.</span>
+<span class="pub-authors">Trub AG, Wagner GR, Anderson KA, et al.</span>
+<span class="pub-venue">Nature Communications (2022) 13:2542</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Statin therapy inhibits fatty acid synthase via dynamic protein modifications.","author":[{"@type":"Person","name":"Trub AG"},{"@type":"Person","name":"Wagner GR"},{"@type":"Person","name":"Anderson KA"}],"datePublished":"2022","isPartOf":{"@type":"Periodical","name":"Nature Communications"},"identifier":"https://doi.org/10.1038/s41467-022-30060-w","sameAs":"https://doi.org/10.1038/s41467-022-30060-w","url":"https://doi.org/10.1038/s41467-022-30060-w"}</script>
 <div class="pub">
-
-<span class="pub-title">The Growing Landscape of Protein Modifications.</span> <span class="pub-authors">Keenan EK, Zachman DK, Hirschey MD.</span> <span class="pub-venue">Molecular Cell (2021) 81(9):1868-1878</span>
-
+<span class="pub-title">The Growing Landscape of Protein Modifications.</span>
+<span class="pub-authors">Keenan EK, Zachman DK, Hirschey MD.</span>
+<span class="pub-venue">Molecular Cell (2021) 81(9):1868-1878</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"The Growing Landscape of Protein Modifications.","author":[{"@type":"Person","name":"Keenan EK"},{"@type":"Person","name":"Zachman DK"},{"@type":"Person","name":"Hirschey MD"}],"datePublished":"2021","isPartOf":{"@type":"Periodical","name":"Molecular Cell"},"identifier":"https://doi.org/10.1016/j.molcel.2021.03.015","sameAs":"https://doi.org/10.1016/j.molcel.2021.03.015","url":"https://doi.org/10.1016/j.molcel.2021.03.015"}</script>
 <div class="pub">
-
-<span class="pub-title">Creating An Environment For A Distributed Scientific Workforce.</span> <span class="pub-authors">Hirschey MD.</span> <span class="pub-venue">Nature (2020) 582:184</span>
-
+<span class="pub-title">Creating An Environment For A Distributed Scientific Workforce.</span>
+<span class="pub-authors">Hirschey MD.</span>
+<span class="pub-venue">Nature (2020) 582:184</span>
 </div>
-
 <div class="pub">
-
-<span class="pub-title">SIRT4 is a Lysine Deacylase That Controls Leucine Metabolism and Insulin Secretion.</span> <span class="pub-authors">Anderson KA, Huynh FK, Fisher-Wellman K, et al.</span> <span class="pub-venue">Cell Metabolism (2017) 25(4):838-855</span>
-
+<span class="pub-title">SIRT4 is a Lysine Deacylase That Controls Leucine Metabolism and Insulin Secretion.</span>
+<span class="pub-authors">Anderson KA, Huynh FK, Fisher-Wellman K, et al.</span>
+<span class="pub-venue">Cell Metabolism (2017) 25(4):838-855</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"SIRT4 is a Lysine Deacylase That Controls Leucine Metabolism and Insulin Secretion.","author":[{"@type":"Person","name":"Anderson KA"},{"@type":"Person","name":"Huynh FK"},{"@type":"Person","name":"Fisher-Wellman K"}],"datePublished":"2017","isPartOf":{"@type":"Periodical","name":"Cell Metabolism"},"identifier":"https://doi.org/10.1016/j.cmet.2017.03.003","sameAs":"https://doi.org/10.1016/j.cmet.2017.03.003","url":"https://doi.org/10.1016/j.cmet.2017.03.003"}</script>
 <div class="pub">
-
-<span class="pub-title">A Class of Reactive Acyl-CoA Species Reveals the Nonenzymatic Origins of Protein Acylation.</span> <span class="pub-authors">Wagner GR, Bhatt DP, O’Connell TM, et al.</span> <span class="pub-venue">Cell Metabolism (2017) 25(4):823-837</span>
-
+<span class="pub-title">A Class of Reactive Acyl-CoA Species Reveals the Nonenzymatic Origins of Protein Acylation.</span>
+<span class="pub-authors">Wagner GR, Bhatt DP, O’Connell TM, et al.</span>
+<span class="pub-venue">Cell Metabolism (2017) 25(4):823-837</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"A Class of Reactive Acyl-CoA Species Reveals the Nonenzymatic Origins of Protein Acylation.","author":[{"@type":"Person","name":"Wagner GR"},{"@type":"Person","name":"Bhatt DP"},{"@type":"Person","name":"O’Connell TM"}],"datePublished":"2017","isPartOf":{"@type":"Periodical","name":"Cell Metabolism"},"identifier":"https://doi.org/10.1016/j.cmet.2017.03.006","sameAs":"https://doi.org/10.1016/j.cmet.2017.03.006","url":"https://doi.org/10.1016/j.cmet.2017.03.006"}</script>
 <div class="pub">
-
-<span class="pub-title">Role of NAD⁺ and mitochondrial sirtuins in cardiac and renal diseases.</span> <span class="pub-authors">Hershberger KA, Martin AS, Hirschey MD.</span> <span class="pub-venue">Nature Reviews Nephrology (2017) 13(4):213-225</span>
-
+<span class="pub-title">Role of NAD⁺ and mitochondrial sirtuins in cardiac and renal diseases.</span>
+<span class="pub-authors">Hershberger KA, Martin AS, Hirschey MD.</span>
+<span class="pub-venue">Nature Reviews Nephrology (2017) 13(4):213-225</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Role of NAD⁺ and mitochondrial sirtuins in cardiac and renal diseases.","author":[{"@type":"Person","name":"Hershberger KA"},{"@type":"Person","name":"Martin AS"},{"@type":"Person","name":"Hirschey MD"}],"datePublished":"2017","isPartOf":{"@type":"Periodical","name":"Nature Reviews Nephrology"},"identifier":"https://doi.org/10.1038/nrneph.2017.5","sameAs":"https://doi.org/10.1038/nrneph.2017.5","url":"https://doi.org/10.1038/nrneph.2017.5"}</script>
 <div class="pub">
-
-<span class="pub-title">Non-enzymatic protein acylation as a carbon stress regulated by sirtuin deacylases.</span> <span class="pub-authors">Wagner GR, Hirschey MD.</span> <span class="pub-venue">Molecular Cell (2014) 54(1):5-16</span>
-
+<span class="pub-title">Non-enzymatic protein acylation as a carbon stress regulated by sirtuin deacylases.</span>
+<span class="pub-authors">Wagner GR, Hirschey MD.</span>
+<span class="pub-venue">Molecular Cell (2014) 54(1):5-16</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Non-enzymatic protein acylation as a carbon stress regulated by sirtuin deacylases.","author":[{"@type":"Person","name":"Wagner GR"},{"@type":"Person","name":"Hirschey MD"}],"datePublished":"2014","isPartOf":{"@type":"Periodical","name":"Molecular Cell"},"identifier":"https://doi.org/10.1016/j.molcel.2014.03.027","sameAs":"https://doi.org/10.1016/j.molcel.2014.03.027","url":"https://doi.org/10.1016/j.molcel.2014.03.027"}</script>
 <div class="pub">
-
-<span class="pub-title">Lysine Glutarylation Is a Protein Post-Translational Modification Regulated by SIRT5.</span> <span class="pub-authors">Tan M\*, Peng C\*, Anderson KA\*, et al.</span> <span class="pub-venue">Cell Metabolism (2014) 19(4):605-617</span>
-
+<span class="pub-title">Lysine Glutarylation Is a Protein Post-Translational Modification Regulated by SIRT5.</span>
+<span class="pub-authors">Tan M*, Peng C*, Anderson KA*, et al.</span>
+<span class="pub-venue">Cell Metabolism (2014) 19(4):605-617</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Lysine Glutarylation Is a Protein Post-Translational Modification Regulated by SIRT5.","author":[{"@type":"Person","name":"Tan M"},{"@type":"Person","name":"Peng C"},{"@type":"Person","name":"Anderson KA"}],"datePublished":"2014","isPartOf":{"@type":"Periodical","name":"Cell Metabolism"},"identifier":"https://doi.org/10.1016/j.cmet.2014.03.014","sameAs":"https://doi.org/10.1016/j.cmet.2014.03.014","url":"https://doi.org/10.1016/j.cmet.2014.03.014"}</script>
 <div class="pub">
-
-<span class="pub-title">Suppression of Oxidative Stress by β-Hydroxybutyrate, an Endogenous Histone Deacetylase Inhibitor.</span> <span class="pub-authors">Shimazu T, Hirschey MD, Newman J, et al.</span> <span class="pub-venue">Science (2013) 339:211-214</span>
-
+<span class="pub-title">Suppression of Oxidative Stress by β-Hydroxybutyrate, an Endogenous Histone Deacetylase Inhibitor.</span>
+<span class="pub-authors">Shimazu T, Hirschey MD, Newman J, et al.</span>
+<span class="pub-venue">Science (2013) 339:211-214</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Suppression of Oxidative Stress by β-Hydroxybutyrate, an Endogenous Histone Deacetylase Inhibitor.","author":[{"@type":"Person","name":"Shimazu T"},{"@type":"Person","name":"Hirschey MD"},{"@type":"Person","name":"Newman J"}],"datePublished":"2013","isPartOf":{"@type":"Periodical","name":"Science"},"identifier":"https://doi.org/10.1126/science.1227166","sameAs":"https://doi.org/10.1126/science.1227166","url":"https://doi.org/10.1126/science.1227166"}</script>
 <div class="pub">
-
-<span class="pub-title">SIRT3 Deficiency and Mitochondrial Protein Hyperacetylation Accelerate the Development of the Metabolic Syndrome.</span> <span class="pub-authors">Hirschey MD, Shimazu T, Jing E, et al.</span> <span class="pub-venue">Molecular Cell (2011) 44:177-190</span>
-
+<span class="pub-title">SIRT3 Deficiency and Mitochondrial Protein Hyperacetylation Accelerate the Development of the Metabolic Syndrome.</span>
+<span class="pub-authors">Hirschey MD, Shimazu T, Jing E, et al.</span>
+<span class="pub-venue">Molecular Cell (2011) 44:177-190</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"SIRT3 Deficiency and Mitochondrial Protein Hyperacetylation Accelerate the Development of the Metabolic Syndrome.","author":[{"@type":"Person","name":"Hirschey MD"},{"@type":"Person","name":"Shimazu T"},{"@type":"Person","name":"Jing E"}],"datePublished":"2011","isPartOf":{"@type":"Periodical","name":"Molecular Cell"},"identifier":"https://doi.org/10.1016/j.molcel.2011.07.019","sameAs":"https://doi.org/10.1016/j.molcel.2011.07.019","url":"https://doi.org/10.1016/j.molcel.2011.07.019"}</script>
 <div class="pub">
-
-<span class="pub-title">SIRT3 Deacetylates Mitochondrial HMG-CoA Synthase 2 and Regulates Ketone Body Production.</span> <span class="pub-authors">Shimazu T\*, Hirschey MD\*, Ha L, et al.</span> <span class="pub-venue">Cell Metabolism (2010) 12:654-661</span>
-
+<span class="pub-title">SIRT3 Deacetylates Mitochondrial HMG-CoA Synthase 2 and Regulates Ketone Body Production.</span>
+<span class="pub-authors">Shimazu T*, Hirschey MD*, Ha L, et al.</span>
+<span class="pub-venue">Cell Metabolism (2010) 12:654-661</span>
 </div>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"SIRT3 Deacetylates Mitochondrial HMG-CoA Synthase 2 and Regulates Ketone Body Production.","author":[{"@type":"Person","name":"Shimazu T"},{"@type":"Person","name":"Hirschey MD"},{"@type":"Person","name":"Ha L"}],"datePublished":"2010","isPartOf":{"@type":"Periodical","name":"Cell Metabolism"},"identifier":"https://doi.org/10.1016/j.cmet.2010.11.003","sameAs":"https://doi.org/10.1016/j.cmet.2010.11.003","url":"https://doi.org/10.1016/j.cmet.2010.11.003"}</script>
 <div class="pub">
-
-<span class="pub-title">SIRT3 regulates mitochondrial fatty acid oxidation via reversible enzyme deacetylation.</span> <span class="pub-authors">Hirschey MD, Shimazu T, Goetzman E, et al.</span> <span class="pub-venue">Nature (2010) 464:121-125</span>
-
+<span class="pub-title">SIRT3 regulates mitochondrial fatty acid oxidation via reversible enzyme deacetylation.</span>
+<span class="pub-authors">Hirschey MD, Shimazu T, Goetzman E, et al.</span>
+<span class="pub-venue">Nature (2010) 464:121-125</span>
+</div>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"SIRT3 regulates mitochondrial fatty acid oxidation via reversible enzyme deacetylation.","author":[{"@type":"Person","name":"Hirschey MD"},{"@type":"Person","name":"Shimazu T"},{"@type":"Person","name":"Goetzman E"}],"datePublished":"2010","isPartOf":{"@type":"Periodical","name":"Nature"},"identifier":"https://doi.org/10.1038/nature08778","sameAs":"https://doi.org/10.1038/nature08778","url":"https://doi.org/10.1038/nature08778"}</script>
 </div>
 
 </div>
@@ -404,7 +406,6 @@ misc
 
 </div>
 
-- I make [art](https://foundation.app/matthewhirschey) when I want to create.
 - Currently learning: how to teach computational thinking to people who have never written a line of code and don’t plan to.
 - If you’re a prospective trainee: start with the [lab site](https://www.hirscheylab.org).
 - Eagle Scout.
