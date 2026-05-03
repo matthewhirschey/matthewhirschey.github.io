@@ -73,6 +73,10 @@ projects:
     title: "Data-Driven Hypothesis"
     url: "https://www.datadrivenhypothesis.com"
     desc: "A web tool that integrates DepMap, expression, and literature data to suggest functions for understudied genes. Pairs with the pathway co-essentiality work in the lab. Preprint on bioRxiv, 2026."
+  - logo: "img/handbook-logo.png"
+    title: "How to Discover — Heureka's Little Red Handbook"
+    url: "https://handbook.heurekalabs.co"
+    desc: "A short field guide for scientists on how discoveries actually happen — pattern recognition, taste, and the habits behind a useful intuition. Read in the browser, no download required."
 
 # Writing cards — rendered into the body where {{writing}} appears.
 # Each entry has a thumbnail, title, url, and short description.
@@ -125,6 +129,7 @@ publications:
     authors: "Hirschey MD."
     venue: "Nature (2020) 582:184"
     year: 2020
+    doi: "https://doi.org/10.1038/d41586-020-01708-8"
   - title: "SIRT4 is a Lysine Deacylase That Controls Leucine Metabolism and Insulin Secretion."
     authors: "Anderson KA, Huynh FK, Fisher-Wellman K, et al."
     venue: "Cell Metabolism (2017) 25(4):838-855"

@@ -14,6 +14,7 @@
 - [Heureka Labs](https://www.heurekalabs.co): AI foundation models for scientific discovery
 - [Heureka Labs blog](https://www.heurekalabs.org): essays on creativity, computational thinking, and how scientists figure things out
 - [Data-Driven Hypothesis](https://www.datadrivenhypothesis.com): web tool for gene-function discovery via DepMap + expression + literature
+- [How to Discover — Heureka's Little Red Handbook](https://handbook.heurekalabs.co): a short field guide for scientists on pattern recognition, taste, and the habits behind a useful intuition
 - [Duke Center for Computational Thinking](https://computationalthinking.duke.edu): initiative to put computational thinking into every Duke discipline
 - [ORCID](https://orcid.org/0000-0003-4541-5376): authoritative author identifier
 - [Google Scholar](https://scholar.google.com/citations?user=OLG9E-sAAAAJ): citation profile
