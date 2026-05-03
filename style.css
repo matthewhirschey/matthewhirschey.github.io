@@ -258,7 +258,9 @@ hr {
     padding: 2px 0 2px 10px;
     margin-bottom: 10px;
 }
-.pub-title { display: inline; color: #333; font-weight: 600; }
+.pub-title { display: inline; color: #333; font-weight: 600; text-decoration: none; }
+a.pub-title:hover, a.pub-title:focus { text-decoration: underline; }
+a.pub-title:visited { color: #333; }
 .pub-venue { display: inline; color: #090; }
 .pub-authors { display: block; color: #333; }
 

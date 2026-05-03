@@ -1,6 +1,7 @@
 ---
 created: 2026-05-03
-status: active
+completed: 2026-05-03
+status: shipped (PR #4)
 reference: ~/sage/drafts/2026-05-02-geo-leo-research.md
 ---
 
@@ -21,51 +22,41 @@ already shipped Apr 11, 2026. This file tracks the remaining gaps.
 
 ## Gaps
 
-### 1. Wikidata entry — does not exist
-Highest-leverage missing piece. Wikidata is the entity-resolution anchor every
-major LLM uses to verify "who is this person." Without an entry, the four
-brands stay disconnected in their knowledge graphs.
+### 1. Wikidata entry — Q37379356 ✅
+Existing Wikidata entity. Properties (occupation, employer, ORCID, Scopus) were already populated; the parallel agent's `wikidata-quickstatements.txt` batch adds Twitter/GitHub/Scholar/LinkedIn IDs and the UCSB PhD education statement, all referenced to `matthewhirschey.com/`.
 
-- [ ] Create entry at wikidata.org for Matthew Hirschey
-- [ ] Populate P-properties: `instance of: human`, `occupation`, `employer: Duke University`, `educated at: UCSB + UVM`, `field of work: metabolism / computational biology`, `ORCID iD`, `Google Scholar author ID`, `GitHub username`, `official website`, `Twitter username`
-- [ ] Add image (use the b&w portrait already on the site)
-- [ ] Cite secondary sources (Duke faculty page, peer-reviewed papers, news mentions) — meets notability bar easily for a tenured professor
-- [ ] Once Q-number assigned, add `https://www.wikidata.org/wiki/QXXXXX` to `same_as:` in `index.qmd`
-- [ ] Optional follow-on: stub Wikipedia article (higher effort, secondary)
+- [x] Q-number assigned: Q37379356
+- [x] `https://www.wikidata.org/wiki/Q37379356` added to `same_as:` in `index.qmd`
+- [x] QuickStatements batch prepared at `wikidata-quickstatements.txt`; Matt to upload via [quickstatements.toolforge.org](https://quickstatements.toolforge.org/) (manual one-time step)
+- ~~Wikipedia stub~~ — skipped per audit note (higher effort, secondary)
 
-### 2. Missing identity links in `sameAs`
-Add these to `same_as:` array in `index.qmd`:
+### 2. `sameAs` additions ✅
+- [x] LinkedIn `https://www.linkedin.com/in/matthew-hirschey/` (slug confirmed)
+- ~~Bluesky~~ — no active account
+- ~~Mastodon~~ — no active account
+- [x] `https://www.heurekalabs.org` (blog) added alongside `.co` (company)
+- [x] Wikidata Q37379356 added
 
-- [ ] LinkedIn (`https://www.linkedin.com/in/matthewhirschey/` — verify exact slug)
-- [ ] Bluesky if active (`https://bsky.app/profile/...`)
-- [ ] Mastodon if active
-- [ ] `https://www.heurekalabs.org` (blog) alongside `.co` (company) — they're different URLs
-- [ ] Wikidata Q-number once #1 is done
+### 3. `foundation.app` link review ✅
+- [x] Dropped — small experiment, no longer active. Removed from `same_as:` and from `misc` bullet.
 
-### 3. `foundation.app` link review
-Currently in `sameAs`. NFT-era artifact. Decision: keep, drop, or replace?
-- [ ] Decide: keep / drop
+### 4. ScholarlyArticle schema for publications ✅
+- [x] `publications:` YAML array drives both visible markup and JSON-LD from one source (`render-data.lua` `render_publications()`)
+- [x] All 16 visible entries carry a publisher DOI (15 from Crossref, 1 supplied by Matt). Visible titles are clickable DOI links (`target="_blank"`, `rel="noopener"`)
+- [x] All 16 JSON-LD blocks parse cleanly; `index.html` 28 → 29 KB, under 30 KB cap
+- [x] JSON-LD emitted for HTML output only (`FORMAT == "html"` gate); GFM mirror stays clean
+- [x] `json_escape()` uses Unicode escapes (`&`, `<`, `>`) so future titles with `&`/`<`/`>` survive cleanly
 
-### 4. ScholarlyArticle schema for publications
-The `.pub` fenced divs in `index.qmd` aren't marked with structured data.
-LLMs cite peer-reviewed work more confidently when it's tagged as
-`ScholarlyArticle` with a DOI.
+### 5. Validation pass — partial
+- [x] schema.org validator: Person clean (0 errors / 0 warnings) on live site pre-merge; ScholarlyArticle blocks pending live deploy
+- [x] Google Rich Results: "no items detected" is expected — Person and ScholarlyArticle aren't rich-result-eligible types in Google's catalog. "Crawled successfully" is the only positive signal available
+- [ ] Re-run schema.org validator on the deployed site after PR merge (URL mode) to confirm all 16 ScholarlyArticle entries register
 
-- [ ] Extend `render-data.lua` to emit `<script type="application/ld+json">` blocks per publication, OR add a `publications:` YAML array (DOI, title, authors, journal, year) and render both the visible markup and JSON-LD from one source
-- [ ] Verify each entry has DOI (link out to publisher)
-- [ ] Validate output
-
-### 5. Validation pass
-- [ ] Run rendered `index.html` through Schema.org validator (validator.schema.org)
-- [ ] Run through Google Rich Results Test
-- [ ] Fix any errors / warnings (especially around `&` escaping noted in CLAUDE.md)
-
-### 6. `llms.txt` content review
-The current file lists about-section links. Could be richer:
-
-- [ ] Add a `## Recent writing` section pointing to top heurekalabs.org essays
-- [ ] Add a `## Selected publications` section pointing to 3–5 highest-impact papers (with DOIs)
-- [ ] Re-check: every link in `llms.txt` resolves and represents the canonical version
+### 6. `llms.txt` enrichment ✅
+- [x] `## Recent writing` section — three heurekalabs.org essays
+- [x] `## Selected publications` section — top 7 papers with publisher DOIs
+- [x] LinkedIn + Wikidata added to `## About`
+- [x] All existing links re-resolved
 
 ## Order of operations
 

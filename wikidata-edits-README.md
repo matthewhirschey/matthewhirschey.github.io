@@ -29,7 +29,7 @@ LLM-relevant identity links and bio metadata.
 Each statement carries an `S854` reference URL so future Wikidata reviewers
 see the citation source.
 
-Education facts pulled from Hirschey_CV.qmd:
+Education facts pulled from `~/everything/work/areas/resume-cv/Hirschey_CV.qmd` (lives in the resume-cv repo, not this one):
 - PhD Chemistry & Biochemistry, UC Santa Barbara, Sept 2006 (advisor: Alison Butler)
 - BS Biological Sciences, University of Vermont, June 2001
 - Tenured Associate Professor at Duke since March 2019

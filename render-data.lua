@@ -127,13 +127,18 @@ local function render_writing()
   return table.concat(parts, '\n')
 end
 
--- JSON string escape — backslash, quote, control chars. Pandoc HTML-escapes `&`
--- to `&amp;` after we emit, which corrupts JSON-LD parsing, so we strip `&`
--- preventatively (per CLAUDE.md). Same for `<` and `>` to avoid HTML parser drift.
+-- JSON string escape. `&`, `<`, `>` use Unicode escapes (& / < /
+-- >) so the JSON survives both Pandoc's HTML escaping and the browser's
+-- script-tag termination scan ("</script>" inside a string would close the tag).
+-- Source character is preserved through the JSON parse, unlike a substitution.
 local function json_escape(s)
   if s == nil then return "" end
-  s = s:gsub("\\", "\\\\"):gsub('"', '\\"')
-  s = s:gsub("&", " and "):gsub("<", ""):gsub(">", "")
+  s = s:gsub("\\", "\\\\")
+  s = s:gsub('"', '\\"')
+  s = s:gsub("\n", "\\n"):gsub("\r", "\\r"):gsub("\t", "\\t")
+  s = s:gsub("&", "\\u0026")
+  s = s:gsub("<", "\\u003c")
+  s = s:gsub(">", "\\u003e")
   s = s:gsub("[%z\1-\31]", "")
   return s
 end
@@ -162,13 +167,18 @@ local function render_publications()
   local parts = {
     '<div class="pub-list">',
   }
+  local emit_jsonld = (FORMAT == "html" or FORMAT == "html5" or FORMAT == "html4")
   for _, p in ipairs(publications) do
     table.insert(parts, '<div class="pub">')
-    table.insert(parts, '<span class="pub-title">' .. p.title .. '</span>')
+    if p.doi ~= "" then
+      table.insert(parts, '<a class="pub-title" href="' .. p.doi .. '" target="_blank" rel="noopener">' .. p.title .. '</a>')
+    else
+      table.insert(parts, '<span class="pub-title">' .. p.title .. '</span>')
+    end
     table.insert(parts, '<span class="pub-authors">' .. p.authors .. '</span>')
     table.insert(parts, '<span class="pub-venue">' .. p.venue .. '</span>')
     table.insert(parts, '</div>')
-    if p.doi ~= "" then
+    if emit_jsonld and p.doi ~= "" then
       local jsonld = {
         '<script type="application/ld+json">',
         '{',
