@@ -7,6 +7,7 @@
 local talks = {}
 local projects = {}
 local writing = {}
+local publications = {}
 
 local function to_str(v)
   if v == nil then return "" end
@@ -52,6 +53,17 @@ function Meta(m)
         url   = to_str(w.url),
         img   = to_str(w.img),
         desc  = md_to_html(w.desc),
+      }
+    end
+  end
+  if m.publications then
+    for i, p in ipairs(m.publications) do
+      publications[i] = {
+        title   = to_str(p.title),
+        authors = to_str(p.authors),
+        venue   = to_str(p.venue),
+        year    = to_str(p.year),
+        doi     = to_str(p.doi),
       }
     end
   end
@@ -115,6 +127,84 @@ local function render_writing()
   return table.concat(parts, '\n')
 end
 
+-- JSON string escape. `&` survives Pandoc's YAML parser intact, so we emit
+-- a Unicode escape (&) to dodge Pandoc's HTML escaping and the browser's
+-- script-tag termination scan ("</script>" inside a string would close the tag).
+-- The < / > branches for `<` and `>` are belt-and-suspenders only —
+-- Pandoc parses YAML scalars as inline content and silently strips bare HTML
+-- tags before this function ever runs, so a title with `A <foo> B` already
+-- arrives as `A  B`. If you genuinely need literal angle brackets in a title,
+-- escape them in YAML as `\<` and `\>` or use HTML entities.
+local function json_escape(s)
+  if s == nil then return "" end
+  s = s:gsub("\\", "\\\\")
+  s = s:gsub('"', '\\"')
+  s = s:gsub("\n", "\\n"):gsub("\r", "\\r"):gsub("\t", "\\t")
+  s = s:gsub("&", "\\u0026")
+  s = s:gsub("<", "\\u003c")
+  s = s:gsub(">", "\\u003e")
+  s = s:gsub("[%z\1-\31]", "")
+  return s
+end
+
+-- Split "Foo A, Bar B*, Baz C" into JSON-LD authors. Strips `*` co-first markers
+-- and "et al." entries. Drops trailing punctuation.
+local function authors_to_jsonld(s)
+  local clean = s:gsub("%.$", "")
+  local out = {}
+  for name in (clean .. ","):gmatch("([^,]+),%s*") do
+    name = name:gsub("^%s+", ""):gsub("%s+$", ""):gsub("%*", "")
+    if name ~= "" and not name:lower():match("^et al") then
+      table.insert(out, '{"@type":"Person","name":"' .. json_escape(name) .. '"}')
+    end
+  end
+  return table.concat(out, ",")
+end
+
+-- Pull the venue name from an author-styled string like
+-- "Nature Communications (2025) 16:5771" → "Nature Communications".
+local function periodical_name(venue)
+  return (venue:gsub("%s*%(.*$", ""))
+end
+
+local function render_publications()
+  local parts = {
+    '<div class="pub-list">',
+  }
+  local emit_jsonld = (FORMAT == "html" or FORMAT == "html5" or FORMAT == "html4")
+  for _, p in ipairs(publications) do
+    table.insert(parts, '<div class="pub">')
+    if p.doi ~= "" then
+      table.insert(parts, '<a class="pub-title" href="' .. p.doi .. '" target="_blank" rel="noopener">' .. p.title .. '</a>')
+    else
+      table.insert(parts, '<span class="pub-title">' .. p.title .. '</span>')
+    end
+    table.insert(parts, '<span class="pub-authors">' .. p.authors .. '</span>')
+    table.insert(parts, '<span class="pub-venue">' .. p.venue .. '</span>')
+    table.insert(parts, '</div>')
+    if emit_jsonld and p.doi ~= "" then
+      local jsonld = {
+        '<script type="application/ld+json">',
+        '{',
+        '"@context":"https://schema.org",',
+        '"@type":"ScholarlyArticle",',
+        '"name":"' .. json_escape(p.title) .. '",',
+        '"author":[' .. authors_to_jsonld(p.authors) .. '],',
+        '"datePublished":"' .. p.year .. '",',
+        '"isPartOf":{"@type":"Periodical","name":"' .. json_escape(periodical_name(p.venue)) .. '"},',
+        '"identifier":"' .. p.doi .. '",',
+        '"sameAs":"' .. p.doi .. '",',
+        '"url":"' .. p.doi .. '"',
+        '}',
+        '</script>',
+      }
+      table.insert(parts, table.concat(jsonld, ''))
+    end
+  end
+  table.insert(parts, '</div>')
+  return table.concat(parts, '\n')
+end
+
 function Para(el)
   if #el.content == 1 and el.content[1].t == "Str" then
     local text = el.content[1].text
@@ -124,6 +214,8 @@ function Para(el)
       return pandoc.RawBlock("html", render_projects())
     elseif text == "{{writing}}" then
       return pandoc.RawBlock("html", render_writing())
+    elseif text == "{{publications}}" then
+      return pandoc.RawBlock("html", render_publications())
     end
   end
 end

@@ -14,8 +14,27 @@
 - [Heureka Labs](https://www.heurekalabs.co): AI foundation models for scientific discovery
 - [Heureka Labs blog](https://www.heurekalabs.org): essays on creativity, computational thinking, and how scientists figure things out
 - [Data-Driven Hypothesis](https://www.datadrivenhypothesis.com): web tool for gene-function discovery via DepMap + expression + literature
+- [How to Discover — Heureka's Little Red Handbook](https://handbook.heurekalabs.co): a short field guide for scientists on pattern recognition, taste, and the habits behind a useful intuition
 - [Duke Center for Computational Thinking](https://computationalthinking.duke.edu): initiative to put computational thinking into every Duke discipline
 - [ORCID](https://orcid.org/0000-0003-4541-5376): authoritative author identifier
 - [Google Scholar](https://scholar.google.com/citations?user=OLG9E-sAAAAJ): citation profile
 - [Duke Scholars profile](https://scholars.duke.edu/person/matthew.hirschey): Duke faculty page
 - [GitHub](https://github.com/matthewhirschey): code and projects
+- [LinkedIn](https://www.linkedin.com/in/matthew-hirschey/): professional profile
+- [Wikidata](https://www.wikidata.org/wiki/Q37379356): structured-data entity for Matthew Hirschey
+
+## Recent writing
+
+- [How do you come up with a new idea?](https://www.heurekalabs.org/a-new-experiment/): on the mechanics of ideation — the question is not what to work on, but how you decide what to try
+- [Sell the sawdust](https://www.heurekalabs.org/sell-the-sawdust/): on the byproducts of research and the overlooked value hiding in the scraps of what you're already doing
+- [Why you need to learn to program](https://www.heurekalabs.org/why-learn-to-program/): the case for programming as a thinking tool, not a job skill — for scientists, students, and pretty much everyone else
+
+## Selected publications
+
+- [Pathway Coessentiality Mapping Reveals Complex II is Required for de novo Purine Biosynthesis in Acute Myeloid Leukemia](https://doi.org/10.1038/s42255-025-01410-x): Stewart, Zachman, Castellano-Escuder, et al. Nature Metabolism (2025) 7(12):2474-2488
+- [Interpretable multi-omics integration with UMAP embeddings and density-based clustering](https://doi.org/10.1038/s41467-025-60822-1): Castellano-Escuder, Zachman, Han, Hirschey. Nature Communications (2025) 16:5771
+- [The Growing Landscape of Protein Modifications](https://doi.org/10.1016/j.molcel.2021.03.015): Keenan, Zachman, Hirschey. Molecular Cell (2021) 81(9):1868-1878
+- [Lysine Glutarylation Is a Protein Post-Translational Modification Regulated by SIRT5](https://doi.org/10.1016/j.cmet.2014.03.014): Tan, Peng, Anderson, et al. Cell Metabolism (2014) 19(4):605-617
+- [Suppression of Oxidative Stress by β-Hydroxybutyrate, an Endogenous Histone Deacetylase Inhibitor](https://doi.org/10.1126/science.1227166): Shimazu, Hirschey, Newman, et al. Science (2013) 339:211-214
+- [SIRT3 Deficiency and Mitochondrial Protein Hyperacetylation Accelerate the Development of the Metabolic Syndrome](https://doi.org/10.1016/j.molcel.2011.07.019): Hirschey, Shimazu, Jing, et al. Molecular Cell (2011) 44:177-190
+- [SIRT3 regulates mitochondrial fatty acid oxidation via reversible enzyme deacetylation](https://doi.org/10.1038/nature08778): Hirschey, Shimazu, Goetzman, et al. Nature (2010) 464:121-125
