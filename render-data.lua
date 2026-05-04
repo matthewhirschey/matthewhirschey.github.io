@@ -127,10 +127,14 @@ local function render_writing()
   return table.concat(parts, '\n')
 end
 
--- JSON string escape. `&`, `<`, `>` use Unicode escapes (& / < /
--- >) so the JSON survives both Pandoc's HTML escaping and the browser's
+-- JSON string escape. `&` survives Pandoc's YAML parser intact, so we emit
+-- a Unicode escape (&) to dodge Pandoc's HTML escaping and the browser's
 -- script-tag termination scan ("</script>" inside a string would close the tag).
--- Source character is preserved through the JSON parse, unlike a substitution.
+-- The < / > branches for `<` and `>` are belt-and-suspenders only —
+-- Pandoc parses YAML scalars as inline content and silently strips bare HTML
+-- tags before this function ever runs, so a title with `A <foo> B` already
+-- arrives as `A  B`. If you genuinely need literal angle brackets in a title,
+-- escape them in YAML as `\<` and `\>` or use HTML entities.
 local function json_escape(s)
   if s == nil then return "" end
   s = s:gsub("\\", "\\\\")

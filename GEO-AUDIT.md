@@ -42,8 +42,8 @@ Existing Wikidata entity. Properties (occupation, employer, ORCID, Scopus) were 
 
 ### 4. ScholarlyArticle schema for publications ✅
 - [x] `publications:` YAML array drives both visible markup and JSON-LD from one source (`render-data.lua` `render_publications()`)
-- [x] All 16 visible entries carry a publisher DOI (15 from Crossref, 1 supplied by Matt). Visible titles are clickable DOI links (`target="_blank"`, `rel="noopener"`)
-- [x] All 16 JSON-LD blocks parse cleanly; `index.html` 28 → 29 KB, under 30 KB cap
+- [x] All 15 visible entries carry a publisher DOI (14 from Crossref, 1 supplied by Matt). Visible titles are clickable DOI links (`target="_blank"`, `rel="noopener"`)
+- [x] All 15 ScholarlyArticle JSON-LD blocks parse cleanly (16 total with the Person block from `template.html`); `index.html` 28 → 29 KB, under 30 KB cap
 - [x] JSON-LD emitted for HTML output only (`FORMAT == "html"` gate); GFM mirror stays clean
 - [x] `json_escape()` uses Unicode escapes (`&`, `<`, `>`) so future titles with `&`/`<`/`>` survive cleanly
 
